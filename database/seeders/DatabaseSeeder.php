@@ -17,28 +17,22 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::create([
-            'user_name' => 'Admin',
-            'email' => 'admin@admin.com',
-            'password' => bcrypt(12345678),
+            'name' => 'Seller',
+            'email' => 'seller@seller.com',
+            'password' => bcrypt(12345),
             'role' => 'seller',
         ]);
 
         User::create([
-            'user_name' => 'Jonathan Kristanto',
-            'email' => 'jokris@gmail.com',
-            'password' => bcrypt(12345678),
+            'name' => 'Customer',
+            'email' => 'customer@customer.com',
+            'password' => bcrypt(12345),
             'role' => 'customer',
         ]);
 
-        User::create([
-            'user_name' => 'Henry',
-            'email' => 'henry@gmail.com',
-            'password' => bcrypt(12345678),
-            'role' => 'customer',
+        $this->call([
+            CategorySeeder::class,
+            BookSeeder::class
         ]);
-
-        Category::factory(6)->create();
-
-        TransactionHeader::factory(10)->create();
     }
 }
