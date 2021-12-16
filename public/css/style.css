@@ -1,0 +1,9 @@
+body{
+    height: 100vh;
+}
+
+.content-container{
+    height: 80vh;
+    display: flex;
+    padding-top: 5vh;
+}

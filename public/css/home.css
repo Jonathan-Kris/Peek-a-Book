@@ -1,0 +1,27 @@
+.content{
+    margin-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+.product-card{
+    width: 24rem;
+    display: flex;
+    margin: 1rem 0;
+}
+
+.product-card img{
+    height: 24rem;
+    width: 24rem;
+}
+
+.btn{
+    width: 100%;
+}
+
+.card-text{
+    height: 4rem;
+}
+
+.product-show{
+    padding-bottom: 5rem;
+}
