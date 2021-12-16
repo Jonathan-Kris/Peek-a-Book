@@ -16,6 +16,14 @@ The marketplace for book & comic lover who can't get enough of reading material
 8. Run `php artisan storage:link`
 9. Run the web using `php artisan serve` and voila it's ready to run!
 
+## Account for Trial
+Seller :
+- Email = seller@seller.com
+- Password = 12345
+
+Customer :
+- Email = customer@customer.com
+- Password = 12345
 ## Created By
 2301860154 - Jonathan Kristanto
 
