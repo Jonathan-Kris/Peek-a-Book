@@ -5,6 +5,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UpdateProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -55,3 +56,9 @@ Route::get('/search-product', [SearchController::class, 'searching']);
 // Cart
 Route::get('/add-to-cart/{product_id}',[ProductController::class, 'add_to_cart']);
 Route::get('/cart/{user_id}',[CartController::class, 'index']);
+Route::delete('/delete-item-cart/{product_id}/{transaction_id}',[CartController::class, 'deleteFromCart']);
+Route::post('/checkout/{transaction_id}', [CartController::class, 'checkoutTransaction']);
+
+// Transaction
+Route::get('/transaction',[TransactionController::class, 'index']);
+Route::post('/check-detail/{transaction_id}',[TransactionController::class, 'trans_detail']);
