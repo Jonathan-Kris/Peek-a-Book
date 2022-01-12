@@ -45,7 +45,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 {{ Session::get('username_session') }}
                             </a>
-                            @if (Auth::user()->role == 'seller')
+                            @if (Auth::user()->role == 'admin')
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="/insert-product">Insert Product</a></li>
                                     <li><a class="dropdown-item" href="/logout">Logout</a></li>

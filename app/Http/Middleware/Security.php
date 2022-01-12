@@ -17,7 +17,7 @@ class Security
      */
     public function handle(Request $request, Closure $next)
     {
-        if(!Auth::check() || Auth::user()->role != 'seller'){
+        if(!Auth::check() || Auth::user()->role != 'admin'){
             // Unauthorize
             return abort(401);
         }
