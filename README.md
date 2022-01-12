@@ -18,7 +18,7 @@ The marketplace for book & comic lover who can't get enough of reading material
 
 ## Account for Trial
 Seller :
-- Email = seller@seller.com
+- Email = admin@admin.com
 - Password = 12345
 
 Customer :
