@@ -9,7 +9,6 @@
     <div class="card">
         <h5 class="card-header">Update Product</h5>
         <div class="card-body">
-            {{-- IPATH ACTION MASIH HARDCODE ID, NANTI HRS DIGANTI --}}
             <form enctype="multipart/form-data" method="POST" action="/api/update-product/{{ $product_id }}">
                 @csrf
                 <div class="form-group">
@@ -36,7 +35,7 @@
                 <div class="form-group">
                     <label for="title">Title</label>
                     <input type="text" class="form-control @error('title') is-invalid @enderror"
-                     name="title" id="title" placeholder="{{ $book->product_title }}">
+                     name="title" id="title" value="{{ $book->product_title }}">
                     @error('title')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -47,7 +46,7 @@
                 <div class="form-group">
                     <label for="description">Description</label>
                     <textarea class="form-control @error('description') is-invalid @enderror"
-                    name="description" id="description" cols="20" rows="5" placeholder="{{ $book->product_desc }}"></textarea>
+                    name="description" id="description" cols="20" rows="5">{{ $book->product_desc }}</textarea>
                     @error('description')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -58,7 +57,7 @@
                 <div class="form-group">
                     <label for="price">Price</label>
                     <input type="number" class="form-control @error('price') is-invalid @enderror"
-                     name="price" id="price" placeholder={{ $book->product_price }}>
+                     name="price" id="price" value={{ $book->product_price }}>
                     @error('price')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -69,7 +68,7 @@
                 <div class="form-group">
                     <label for="stock">Stock</label>
                     <input type="number" class="form-control @error('stock') is-invalid @enderror"
-                    name="stock" id="stock" placeholder={{ $book->product_stock }}>
+                    name="stock" id="stock" value={{ $book->product_stock }}>
                     @error('stock')
                     <div class="invalid-feedback">
                         {{ $message }}
