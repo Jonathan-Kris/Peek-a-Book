@@ -29,13 +29,13 @@
 
                 <div class="form-floating">
                     <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
-                        id="password" placeholder="Password">
+                        id="password" placeholder="Password" value="{{ Cookie::get('PASSWORD_COOKIE') !== null ? Cookie::get('PASSWORD_COOKIE') : "" }}">
                     <label for="floatingPassword">Password</label>
-                    @error('password')
+                    @if ($errors->has('password'))
                     <div class="invalid-feedback">
-                        {{ $message }}
+                        <strong>{{ $errors->first('password') }}</strong>
                     </div>
-                    @enderror
+                    @endif
                 </div>
 
                 <div class="d-flex justify-content-between align-items-center mb-3">
