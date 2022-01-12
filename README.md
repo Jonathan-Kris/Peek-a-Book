@@ -12,7 +12,7 @@ The marketplace for book & comic lover who can't get enough of reading material
 4. Run `php artisan key:generate`
 5. CActivate XAMPP & MySQL service. 
 6. Create the DB and configure the `.env`
-7. Run `php artisan migrate:fresh`
+7. Run `php artisan migrate:fresh --seed`
 8. Run `php artisan storage:link`
 9. Run the web using `php artisan serve` and voila it's ready to run!
 
