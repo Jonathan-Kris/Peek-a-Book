@@ -16,6 +16,11 @@ The marketplace for book & comic lover who can't get enough of reading material
 8. Run `php artisan storage:link`
 9. Run the web using `php artisan serve` and voila it's ready to run!
 
+## Video Demo
+[![Watch the video](https://img.youtube.com/vi/zLTE2VAeoLs/maxresdefault.jpg)](https://youtu.be/zLTE2VAeoLs)
+
+Youtube Link : https://youtu.be/zLTE2VAeoLs
+
 ## Account for Trial
 Seller :
 - Email = admin@admin.com
